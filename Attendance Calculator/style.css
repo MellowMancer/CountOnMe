@@ -65,10 +65,23 @@ body{
     text-align: center;
     margin: 0.8rem;
 }
-
-.answercontainer{
+.answercontainercontainer{
     display: flex;
     flex-direction: row;
+}
+.answercontainer{
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem;
+    /* margin: auto 1.4rem; */
+}
+
+#canmiss{
+    border-right: 1px white solid;
+}
+
+.answercontainer>div{
+    text-align: center;
 }
 
 .answer{
@@ -81,7 +94,7 @@ body{
 .input{
     display: flex;
     flex-direction: column;
-    padding: 1rem 2rem 0.5rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
 }
 
 .inputnum{
@@ -94,6 +107,12 @@ body{
     width: 3rem;
 }
 
+.extra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 input{
     border-radius: 0.25rem;
     height: 2rem;
@@ -103,6 +122,12 @@ input{
     color: rgb(225, 225, 225);
     background: rgba(255, 236, 250, 0.075);
     border: 1px  rgb(174, 50, 199) solid;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .arow{
@@ -171,7 +196,14 @@ input{
     }
 
     .input{
-        scale: 80%;
+        scale: 75%;
         margin: 0;
+    }
+    
+    .answercontainer{
+        padding: 0.5rem;
+    }
+    .answercontainercontainer{
+        scale: 70%;
     }
   }

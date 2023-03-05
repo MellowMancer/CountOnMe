@@ -25,7 +25,7 @@
 
         <div class="page" id="mainpage">
             <!-- <button class="toggle" onclick = "togglemode()"></button>  -->
-            
+            <div class="extra">
             <div class="input">
                 <div class="inputsection">
                     
@@ -48,8 +48,8 @@
                         </tr>
                         <tr>
                             <td>Practical:&nbsp;</td>
-                            <td class="tableinput"><input type="text" class="inputnum" id="practical1" placeholder="" value="0.5" name="practical1"></td>
-                            <td class="tableinput"><input type="text" class="inputnum" id="practical2" placeholder="" value="1.5" name="practical2"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practical1" placeholder="" value="1" name="practical1"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practical2" placeholder="" value="2" name="practical2"></td>
                             <td class="tableinput"><input type="text" class="inputnum" id="practical3" placeholder="" value="1" name="practical3"></td>
                             <td class="tableinput"><input type="text" class="inputnum" id="practical4" placeholder="" value="1" name="practical4"></td>
                             <td class="tableinput"><input type="text" class="inputnum" id="practical5" placeholder="" value="2" name="practical5"></td>
@@ -86,13 +86,15 @@
                 <button id="display" onclick = "test()">Showtime</button>
                 </div>
             </div>
+            </div>
 
 
             <div class="result">
-                <div class="drumroll">
-                    You can currently afford to miss (Ignoring Holidays)
+                <div class="answercontainercontainer">
+                <div class="answercontainer" id="canmiss">
+                <div>
+                    You can afford to miss<br>(Ignoring Holidays)
                 </div>
-                <div class="answercontainer">
                 <table>
                 <tr>
                     <th class="resulthead">Theory</th>
@@ -112,8 +114,31 @@
                 </tr>
                 </table>
                 </div>
+                <div class="answercontainer" id="weekanswer">
+                    <div>In a week, you need to attend<br></div>
+                    <table>
+                    <tr>
+                        <th class="resulthead">Theory</th>
+                        <th class="resulthead">Practical</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="answer" id="twdiv">
+                                -
+                            </div>
+                        </td>
+                        <td>
+                            <div class="answer" id="pwdiv">
+                                -
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+            </div>
             </div>
         </div>
+
     </div>
 </body>
 </html>

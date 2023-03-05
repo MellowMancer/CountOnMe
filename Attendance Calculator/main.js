@@ -78,8 +78,8 @@ function test(){
     var tlecs = Calculatetlecs(t, dates, datee);
     var plecs = Calculateplecs(p, dates, datee);
 
-    var tclassattended = Math.ceil(((nweeksdone*weekt + tlecsdone)*tattendance)/100);
-    var pclassattended = Math.ceil(((nweeksdone*weekp + plecsdone)*pattendance)/100);
+    var tclassattended = Math.floor(((nweeksdone*weekt + tlecsdone)*tattendance)/100);
+    var pclassattended = Math.floor(((nweeksdone*weekp + plecsdone)*pattendance)/100);
 
     var tclassrem = nweeksrem*weekt + tlecsrem;
     var pclassrem = nweeksrem*weekp + plecsrem;
@@ -90,8 +90,14 @@ function test(){
     var mintmiss = (tclassrem - totaltclass + tclassattended);
     var minpmiss = (pclassrem - totalpclass + pclassattended);
 
+    var ttoattend = Math.ceil((totaltclass - tclassattended)/nweeksrem);
+    var ptoattend = Math.ceil((totalpclass - pclassattended)/nweeksrem)
+
     document.getElementById('tdiv').innerHTML = mintmiss;
     document.getElementById('pdiv').innerHTML = minpmiss;
+
+    document.getElementById('twdiv').innerHTML = ttoattend;
+    document.getElementById('pwdiv').innerHTML = ptoattend;
     k--;
     }   
     
