@@ -1,0 +1,177 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: 600;
+}
+
+.container{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+
+.page{
+    scroll-snap-align: center;
+}
+
+#homepage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(174, 50, 199);
+    text-align: center;
+    color: white;
+}
+
+.welcome{
+    font-size: 13vh;
+    font-weight: 800;
+}
+
+.subtext{
+    font-size: 4vh;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#mainpage{
+    height: 100vh;
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+.toggle{
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    background: url(toggle.svg);
+    border: none;
+    float: right;
+    margin: 0.5rem 1rem 0rem 0rem;
+}
+
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.4rem 4rem 0.4rem 4rem;
+}
+
+.drumroll{
+    text-align: center;
+    margin: 0.8rem;
+}
+
+.answercontainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.answer{
+    font-family: 'Tilt Warp';
+    font-size: 6rem;
+    color:  rgb(174, 50, 199);
+    margin: 0.5rem 2rem 0rem 2rem;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 0.5rem 2rem;
+}
+
+.inputnum{
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+}
+
+.attend{
+    width: 3rem;
+}
+
+input{
+    border-radius: 0.25rem;
+    height: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Tilt Warp';
+    color: rgb(225, 225, 225);
+    background: rgba(255, 236, 250, 0.075);
+    border: 1px  rgb(174, 50, 199) solid;
+}
+
+.arow{
+    padding: 0.2rem 0;
+}
+
+.days{
+    width: 5rem;
+}
+
+.tableinput{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.inputdiv{
+    margin: 1rem 1rem 1rem 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.seclabel{
+    margin-right: 1rem;
+}
+
+#display{
+    font-family: 'Tilt Warp';
+    color: rgb(228, 228, 228);
+    background-color: rgb(175, 53, 200);
+    font-size: 1.6rem;
+    margin: 1rem 0rem 0rem 0rem;
+    padding: 0 1rem 0 1rem;
+    height: 4rem;
+    border-radius: 0.4rem;
+    max-width: 14rem;
+    border: none;
+}
+#display:hover{
+    scale: 101%;
+}
+
+#display:active{
+    scale: 99%;
+}
+
+@media screen and (max-width:700px){
+    .welcome{
+        font-size: 10vh;
+        font-weight: 800;
+    }
+    
+    .subtext{
+        font-size: 3.5vh;
+        
+    }
+
+    .answer{
+        font-family: 'Tilt Warp';
+        font-size: 4rem;
+        margin: 0.2rem 1.6rem 0.2rem 1.6rem;
+    }
+
+    .result{
+        margin: 0rem 3rem 0rem 3rem;
+    }
+
+    .input{
+        scale: 80%;
+        margin: 0;
+    }
+  }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Attendance Calculator is a website which helps you to calculate approximately how many classes
+                                        a student can afford to miss given their current attendance">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@600;700;800;900;1000&family=Tilt+Warp&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+    <title>Attendance Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="page" id="homepage">
+            <div>
+            <div class="welcome">Welcome</div>
+            <div class="subtext">Lets take a dive into how many more lectures you can afford to miss!</div>
+            </div>
+        </div>
+        
+
+        <div class="page" id="mainpage">
+            <!-- <button class="toggle" onclick = "togglemode()"></button>  -->
+            
+            <div class="input">
+                <div class="inputsection">
+                    
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th class="days">Mon</th>
+                            <th class="days">Tue</th>
+                            <th class="days">Wed</th>
+                            <th class="days">Thu</th>
+                            <th class="days">Fri</th>
+                        </tr>
+                        <tr>
+                            <td>Theory:&nbsp;</td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theory1" placeholder="" value="6" name="theory1" ></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theory2" placeholder="" value="4" name="theory2"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theory3" placeholder="" value="5" name="theory3"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theory4" placeholder="" value="4" name="theory4"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theory5" placeholder="" value="2" name="theory5"></td>
+                        </tr>
+                        <tr>
+                            <td>Practical:&nbsp;</td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practical1" placeholder="" value="0.5" name="practical1"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practical2" placeholder="" value="1.5" name="practical2"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practical3" placeholder="" value="1" name="practical3"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practical4" placeholder="" value="1" name="practical4"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practical5" placeholder="" value="2" name="practical5"></td>
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div class="inputsection">
+                    <table>
+                        <tr>
+                            <td class="arow"><label for="start" class="seclabel">Start Of Session:</label></td>
+                            <td class="arow"><input type="date" id="dates" placeholder="" name="date"></td>
+                        </tr>
+                        <tr>
+                            <td class="arow"><label for="mid" class="seclabel">Current Date Of Session:</label></td>
+                            <td class="arow"><input type="date" id="datem" placeholder="" name="date"></td>
+                        </tr>
+                        <tr>
+                            <td class="arow"><label for="end" class="seclabel">End Of Session:</label></td>
+                            <td class="arow"><input type="date" id="datee" min="1" max="31" step="1" placeholder="DD" name="date"></td>
+                        </tr>
+                        <tr>
+                            <td class="arow"> <label for="theory" class="seclabel">Current Theory Attendance:&nbsp;</label></td>
+                            <td class="arow"><input type="text" class="attend" id="theory" placeholder="-" name="theory"></td>
+                        </tr>
+                        <tr>
+                            <td class="arow"><label for="practical" class="seclabel">Current Practical Attendance:&nbsp;</label></td>
+                            <td class="arow"><input type="text" class="attend" id="practical" placeholder="-" name="practical"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="button">
+                <button id="display" onclick = "test()">Showtime</button>
+                </div>
+            </div>
+
+
+            <div class="result">
+                <div class="drumroll">
+                    You can currently afford to miss (Ignoring Holidays)
+                </div>
+                <div class="answercontainer">
+                <table>
+                <tr>
+                    <th class="resulthead">Theory</th>
+                    <th class="resulthead">Practical</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="answer" id="tdiv">
+                            -
+                        </div>
+                    </td>
+                    <td>
+                        <div class="answer" id="pdiv">
+                            -
+                        </div>
+                    </td>
+                </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
