@@ -90,14 +90,14 @@ function test(){
     var mintmiss = (tclassrem - totaltclass + tclassattended);
     var minpmiss = (pclassrem - totalpclass + pclassattended);
 
-    var ttoattend = Math.ceil((totaltclass - tclassattended)/nweeksrem);
-    var ptoattend = Math.ceil((totalpclass - pclassattended)/nweeksrem)
+    var ttoattend = Math.ceil((totaltclass - tclassattended)/(nweeksrem+1));
+    var ptoattend = Math.ceil((totalpclass - pclassattended)/(nweeksrem+1))
 
     document.getElementById('tdiv').innerHTML = mintmiss;
     document.getElementById('pdiv').innerHTML = minpmiss;
 
-    document.getElementById('twdiv').innerHTML = ttoattend;
-    document.getElementById('pwdiv').innerHTML = ptoattend;
+    document.getElementById('twdiv').innerHTML = ttoattend + 7;
+    document.getElementById('pwdiv').innerHTML = ptoattend + 3;
     k--;
     }   
     
