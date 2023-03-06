@@ -90,14 +90,14 @@ function test(){
     var mintmiss = (tclassrem - totaltclass + tclassattended);
     var minpmiss = (pclassrem - totalpclass + pclassattended);
 
-    var ttoattend = Math.ceil((totaltclass - tclassattended)/(nweeksrem+1));
-    var ptoattend = Math.ceil((totalpclass - pclassattended)/(nweeksrem+1))
+    var ttoattend = Math.ceil((totaltclass - tclassattended)/CalculateWeeksMore(datem,datee));
+    var ptoattend = Math.ceil((totalpclass - pclassattended)/CalculateWeeksMore(datem,datee));
 
     document.getElementById('tdiv').innerHTML = mintmiss;
     document.getElementById('pdiv').innerHTML = minpmiss;
 
-    document.getElementById('twdiv').innerHTML = ttoattend + 7;
-    document.getElementById('pwdiv').innerHTML = ptoattend + 3;
+    document.getElementById('twdiv').innerHTML = ttoattend;
+    document.getElementById('pwdiv').innerHTML = ptoattend;
     k--;
     }   
     
@@ -148,7 +148,7 @@ function Calculateplecs(p,startDate, endDate)
 
         m += p[day1 - 1];
         day1 += 1;
-    }while(day1 != day2);
+    }while(day1 != day2 + 1);
 
     return m;
 }
@@ -165,4 +165,18 @@ function CalculateWeeks(startDate, endDate)
 	var difference_ms = Math.abs(date1ms - date2ms);
 	// Convert back to weeks and return hole weeks
 	return Math.floor(difference_ms / ONE_WEEK);
+}
+
+function CalculateWeeksMore(startDate, endDate)
+{
+    if (endDate < startDate)
+    return 0;
+
+    var ONE_WEEK = 1000 * 60 * 60 * 24 * 7;
+	var date1ms = startDate.getTime();
+	var date2ms = endDate.getTime();
+	// Calculate the difference in milliseconds
+	var difference_ms = Math.abs(date1ms - date2ms);
+	// Convert back to weeks and return hole weeks
+	return (difference_ms / ONE_WEEK);
 }
