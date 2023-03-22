@@ -68,10 +68,14 @@ body{
 
 
 #mainpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     background-color: rgb(51, 51, 51);
     color: white;
-    padding: 2rem;
+    padding: 0rem;
 }
 
 .toggle{
@@ -89,6 +93,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    scale: 90%;
     margin: 0rem 5rem 0.4rem 5rem;
 }
 
@@ -142,6 +147,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    scale: 95%;
+    padding: 1rem 0 0 0;
 }
 
 input{
@@ -224,7 +231,7 @@ input{
 
     .result{
         margin: 0rem 4rem 0rem 4rem;
-        scale: 90%;
+        scale: 85%;
     }
     
     .answercontainer{
