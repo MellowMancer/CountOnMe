@@ -1,5 +1,4 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     font-family: 'Sofia Sans', sans-serif;
     font-weight: 600;
@@ -28,7 +27,7 @@ body{
 }
 
 .welcome{
-    font-size: 8.5vw;
+    font-size: 8vw;
     font-weight: 800;
     opacity: 0;
     /* margin-top: 5rem; */
@@ -44,7 +43,8 @@ body{
 }
 
 .subtext{
-    font-size: 2.5vw;
+    color: rgb(246, 202, 255);
+    font-size: 2.3vw;
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 4rem;
