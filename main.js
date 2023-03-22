@@ -106,8 +106,8 @@ function test(){
     var equivalent = Math.round(totaltclass/totalpclass*100)/100;
 
     document.getElementById('equivalent').innerHTML = `(1 Practical is equivalent to ${equivalent} Theory lectures)`;
-    document.getElementById('tdiv').innerHTML = mintmiss;
-    document.getElementById('pdiv').innerHTML = minpmiss;
+    // document.getElementById('tdiv').innerHTML = mintmiss;
+    // document.getElementById('pdiv').innerHTML = minpmiss;
 
     document.getElementById('twdiv').innerHTML = ttoattend;
     document.getElementById('pwdiv').innerHTML = ptoattend;

@@ -69,7 +69,7 @@ body{
 
 #mainpage{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -93,8 +93,9 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    scale: 90%;
-    margin: 0rem 5rem 0.4rem 5rem;
+    width: 50%;
+    scale: 110%;
+    margin: 0rem;
 }
 
 .drumroll{
@@ -147,8 +148,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    scale: 95%;
-    padding: 1rem 0 0 0;
+    scale: 110%;
+    width: 50%;
+    padding: 1rem;
 }
 
 input{
@@ -217,7 +219,18 @@ input{
     color: rgb(219, 219, 219);
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-aspect-ratio: 1){
+
+    #mainpage{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgb(51, 51, 51);
+        color: white;
+        padding: 0rem;
+    }
 
     .subtext{
         font-size: 1em;
@@ -226,12 +239,12 @@ input{
     .answer{
         font-family: 'Tilt Warp';
         font-size: 4rem;
-        margin: 0.2rem 1.6rem 0.2rem 1.6rem;
+        margin: 0.2rem 1.6rem;
     }
 
     .result{
-        margin: 0rem 4rem 0rem 4rem;
-        scale: 85%;
+        margin: 0rem 4rem;
+        scale: 100%;
     }
     
     .answercontainer{
@@ -243,16 +256,7 @@ input{
 
     .extra{
         scale: 80%;
-    }
-}
-
-@media screen and (max-height: 700px){
-    .page{
-        scroll-snap-type: none;
-    }
-
-    #mainpage{
-        min-height: 100vh;
-        height: fit-content;
+        margin: 0;
+        padding: 0;
     }
 }
