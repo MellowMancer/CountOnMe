@@ -93,8 +93,10 @@ function test(){
     var tclassrem = nweeksrem*weekt + tlecsrem;
     var pclassrem = nweeksrem*weekp + plecsrem;
 
-    var totaltclass = Math.ceil(3*(nweeks*weekt + tlecs)/4);
-    var totalpclass = Math.ceil(3*(nweeks*weekp + plecs)/4);
+    var bonus = Number(document.getElementById('bonus').value)/2;
+
+    var totaltclass = Math.ceil((75-bonus)*(nweeks*weekt + tlecs)/100);
+    var totalpclass = Math.ceil((75-bonus)*(nweeks*weekp + plecs)/100);
 
     var mintmiss = (tclassrem - totaltclass + tclassattended);
     var minpmiss = (pclassrem - totalpclass + pclassattended);
