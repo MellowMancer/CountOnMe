@@ -40,6 +40,8 @@ function togglemode(){
 
 var k=0;
 function test(){
+    // document.getElementById('result').style.opacity = 1;
+    // document.getElementById('result').style.transition = '0.2s ease-out';
     var tattendance = Number(document.getElementById('theory').value);
     var pattendance = Number(document.getElementById('practical').value);
     var dates = new Date(document.getElementById('dates').value);
@@ -78,42 +80,35 @@ function test(){
     var nweeks = CalculateWeeks(dates, datee);
     var nweeksrem = CalculateWeeks(datem,datee);
 
-    var tlecsdone = Calculatetlecs(t, dates, datem);
-    var plecsdone = Calculateplecs(p, dates, datem);
+    var tlecsdone = Calculatetplecs(t, dates, datem);
+    var plecsdone = Calculatetplecs(p, dates, datem);
 
-    var tlecsrem = Calculatetlecs(t, datem, datee);
-    var plecsrem = Calculateplecs(p, datem, datee);
-
-    var tlecs = Calculatetlecs(t, dates, datee);
-    var plecs = Calculateplecs(p, dates, datee);
+    var tlecs = Calculatetplecs(t, dates, datee);
+    var plecs = Calculatetplecs(p, dates, datee);
 
     var tclassattended = Math.floor(((nweeksdone*weekt + tlecsdone)*tattendance)/100);
     var pclassattended = Math.floor(((nweeksdone*weekp + plecsdone)*pattendance)/100);
-
-    var tclassrem = nweeksrem*weekt + tlecsrem;
-    var pclassrem = nweeksrem*weekp + plecsrem;
 
     var bonus = Math.floor(Number(document.getElementById('bonus').value)/2);
 
     var totaltclass = Math.ceil((75-bonus)*(nweeks*weekt + tlecs)/100);
     var totalpclass = Math.ceil((75-bonus)*(nweeks*weekp + plecs)/100);
 
-    var mintmiss = (tclassrem - totaltclass + tclassattended);
-    var minpmiss = (pclassrem - totalpclass + pclassattended);
-
     var ttoattend = Math.ceil((totaltclass - tclassattended)/CalculateWeeksMore(datem,datee));
     var ptoattend = Math.ceil((totalpclass - pclassattended)/CalculateWeeksMore(datem,datee));
     var equivalent = Math.round(totaltclass/totalpclass*100)/100;
 
     document.getElementById('equivalent').innerHTML = `(1 Practical is equivalent to ${equivalent} Theory lectures)`;
-    // document.getElementById('tdiv').innerHTML = mintmiss;
-    // document.getElementById('pdiv').innerHTML = minpmiss;
 
-    document.getElementById('twdiv').innerHTML = ttoattend;
-    document.getElementById('pwdiv').innerHTML = ptoattend;
+    const tobj = document.getElementById("twdiv");
+    const pobj = document.getElementById("pwdiv");
+    animateValue(tobj, 0, ttoattend , 300);
+    setTimeout(() => {  animateValue(pobj, 0, ptoattend , 320); }, 50);
+
+    document.getElementById('lect').innerHTML = `Theory in a week: ${weekt}<br>Practical in a week: ${weekp}`;
 }    
 
-function Calculatetlecs(t,startDate, endDate)
+function Calculatetplecs(t,startDate, endDate)
 {
     var day1 = startDate.getDay();
     var day2 = endDate.getDay();
@@ -136,31 +131,6 @@ function Calculatetlecs(t,startDate, endDate)
     }while(day1 != day2 + 1);
 
     return n;
-}
-
-function Calculateplecs(p,startDate, endDate)
-{
-    var day1 = startDate.getDay();
-    var day2 = endDate.getDay();
-    if(day1 == 6 && day2 == 0)
-    {
-        return 0;
-    }
-
-    if (day2 == 0 || day2 == 6)
-        day2 = 5;
-
-    var m = 0;
-    do
-    {
-        if(day1 == 0 || day1 == 6)
-            day1 = 1;
-
-        m += p[day1 - 1];
-        day1 += 1;
-    }while(day1 != day2 + 1);
-
-    return m;
 }
 
 function CalculateWeeks(startDate, endDate)
@@ -190,3 +160,16 @@ function CalculateWeeksMore(startDate, endDate)
 	// Convert back to weeks and return hole weeks
 	return (difference_ms / ONE_WEEK);
 }
+
+function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }

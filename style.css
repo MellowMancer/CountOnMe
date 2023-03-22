@@ -88,7 +88,7 @@ body{
     margin: 0.5rem 1rem 0rem 0rem;
 }
 
-.result{
+#result{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,6 +96,7 @@ body{
     width: 50%;
     scale: 110%;
     margin: 0rem;
+    /* opacity: 0; */
 }
 
 .drumroll{
@@ -109,6 +110,7 @@ body{
 .answercontainer{
     display: flex;
     flex-direction: column;
+    width: max-content;
     padding: 1.4rem;
     /* margin: auto 1.4rem; */
 }
@@ -207,7 +209,9 @@ input{
     border: none;
 }
 #display:hover{
-    scale: 101%;
+    scale: 104%;
+    color: white;
+    transition: all 0.2s;
 }
 
 #display:active{
@@ -216,7 +220,22 @@ input{
 
 #equivalent{
     font-size: small;
-    color: rgb(219, 219, 219);
+    color: rgb(202, 202, 202);
+}
+
+#lect{
+    font-size: small;
+    color: rgb(183, 183, 183);
+}
+
+tr:hover{
+    color: rgb(208, 63, 237);
+    transition: 0.2s;
+}
+
+.res-data{
+    width: 12rem;
+    /* border: 1px solid red; */
 }
 
 @media screen and (max-aspect-ratio: 1){
@@ -258,5 +277,10 @@ input{
         scale: 80%;
         margin: 0;
         padding: 0;
+    }
+
+    .res-data{
+        width: 10rem;
+        /* border: 1px solid red; */
     }
 }
