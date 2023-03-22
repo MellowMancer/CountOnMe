@@ -1,4 +1,19 @@
+
+window.onload = function () {
+    document.documentElement.classList.add('go');
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth() + 1;
+    if(mm<10)
+    {
+        mm = "0" + mm; 
+    }
+    let yyyy = today.getFullYear();
+    document.getElementById('datem').value = `${yyyy}-${mm}-${dd}`;
+};
+
 var i=0;
+
 function togglemode(){
     document.getElementsByClassName('.mainpage');
     const display = document.getElementById('display');
@@ -25,12 +40,6 @@ function togglemode(){
 
 var k=0;
 function test(){
-    if( k == 0)
-    {
-        alert("Make sure that no elements are empty");
-        k++;
-    }
-    else{
     var tattendance = Number(document.getElementById('theory').value);
     var pattendance = Number(document.getElementById('practical').value);
     var dates = new Date(document.getElementById('dates').value);
@@ -92,16 +101,15 @@ function test(){
 
     var ttoattend = Math.ceil((totaltclass - tclassattended)/CalculateWeeksMore(datem,datee));
     var ptoattend = Math.ceil((totalpclass - pclassattended)/CalculateWeeksMore(datem,datee));
+    var equivalent = Math.round(totaltclass/totalpclass*100)/100;
 
+    document.getElementById('equivalent').innerHTML = `(1 Practical is equivalent to ${equivalent} Theory lectures)`;
     document.getElementById('tdiv').innerHTML = mintmiss;
     document.getElementById('pdiv').innerHTML = minpmiss;
 
     document.getElementById('twdiv').innerHTML = ttoattend;
     document.getElementById('pwdiv').innerHTML = ptoattend;
-    k--;
-    }   
-    
-}
+}    
 
 function Calculatetlecs(t,startDate, endDate)
 {

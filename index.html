@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <div class="page" id="homepage">
-            <div>
+            <div class="maintext">
             <div class="welcome">Welcome</div>
             <div class="subtext">Lets take a dive into how many more lectures you can afford to miss!</div>
             </div>
@@ -62,23 +62,23 @@
                     <table>
                         <tr>
                             <td class="arow"><label for="start" class="seclabel">Start Of Session:</label></td>
-                            <td class="arow"><input type="date" id="dates" placeholder="" name="date"></td>
+                            <td class="arow"><input type="date" id="dates" placeholder="" name="date" value="2023-01-16"></td>
                         </tr>
                         <tr>
                             <td class="arow"><label for="mid" class="seclabel">Current Date Of Session:</label></td>
-                            <td class="arow"><input type="date" id="datem" placeholder="" name="date"></td>
+                            <td class="arow"><input type="date" id="datem" placeholder="" name="date" value=></td>
                         </tr>
                         <tr>
                             <td class="arow"><label for="end" class="seclabel">End Of Session:</label></td>
-                            <td class="arow"><input type="date" id="datee" min="1" max="31" step="1" placeholder="DD" name="date"></td>
+                            <td class="arow"><input type="date" id="datee" min="1" max="31" step="1" placeholder="DD" name="date" value="2023-04-14"></td>
                         </tr>
                         <tr>
                             <td class="arow"> <label for="theory" class="seclabel">Current Theory Attendance:&nbsp;</label></td>
-                            <td class="arow"><input type="text" class="attend" id="theory" placeholder="-" name="theory"></td>
+                            <td class="arow"><input type="text" class="attend" id="theory" placeholder="-" name="theory" value="75"></td>
                         </tr>
                         <tr>
                             <td class="arow"><label for="practical" class="seclabel">Current Practical Attendance:&nbsp;</label></td>
-                            <td class="arow"><input type="text" class="attend" id="practical" placeholder="-" name="practical"></td>
+                            <td class="arow"><input type="text" class="attend" id="practical" placeholder="-" name="practical" value="75"></td>
                         </tr>
                     </table>
                 </div>
@@ -90,7 +90,7 @@
 
 
             <div class="result">
-                <div class="answercontainercontainer">
+            <div class="answercontainercontainer">
                 <div class="answercontainer" id="canmiss">
                 <div>
                     You can afford to miss<br>(Ignoring Holidays)
@@ -116,6 +116,7 @@
                 </div>
                 <div class="answercontainer" id="weekanswer">
                     <div>In a week, you need to attend<br></div>
+                    <div id="equivalent"><br></div>
                     <table>
                     <tr>
                         <th class="resulthead">Theory</th>
