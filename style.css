@@ -6,9 +6,15 @@ body{
 
 .container{
     overflow-y: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
     overflow-x: hidden;
     height: 100vh;
     scroll-snap-type: y mandatory;
+}
+
+.container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 .page{
