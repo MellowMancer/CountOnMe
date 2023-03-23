@@ -6,7 +6,7 @@ body{
 
 .container{
     overflow-y: scroll;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
     overflow-x: hidden;
     height: 100vh;
@@ -14,7 +14,16 @@ body{
 }
 
 .container::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
+    /* width: 0.6rem; */
+    display: none; /*  Safari and Chrome */
+}
+
+.container::-webkit-scrollbar-thumb { /* Foreground */
+    background: #999;
+}
+
+.container::-webkit-scrollbar-track { /* Background */
+    background: #333;
 }
 
 .page{
