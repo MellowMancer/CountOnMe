@@ -83,6 +83,7 @@ body{
 
 
 #mainpage{
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -93,14 +94,30 @@ body{
     padding: 0rem;
 }
 
-.toggle{
-    position: relative;
-    height: 3rem;
-    width: 3rem;
-    background: url(toggle.svg);
+#toggle{
+    position: absolute;
+    text-align: center;
+    font-family: 'Tilt Warp';
+    color: rgb(228, 228, 228);
+    background-color: rgb(175, 53, 200);
+    border-radius: 0.5rem;
     border: none;
-    float: right;
-    margin: 0.5rem 1rem 0rem 0rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    height: 3.2rem;
+    width: 4.5rem;    
+    /* background: url(toggle.svg); */
+    margin: 0.5rem 1rem;
+}
+
+#toggle:hover{
+    scale: 104%;
+    color: white;
+    transition: all 0.05s;
+}
+
+#toggle:active{
+    scale: 99%;
 }
 
 #result{
@@ -226,7 +243,7 @@ input{
 #display:hover{
     scale: 104%;
     color: white;
-    transition: all 0.2s;
+    transition: all 0.08s;
 }
 
 #display:active{

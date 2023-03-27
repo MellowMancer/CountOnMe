@@ -14,31 +14,123 @@ window.onload = function () {
 
 var i=0;
 
-function togglemode(){
-    document.getElementsByClassName('.mainpage');
-    const display = document.getElementById('display');
-    const inputnum = document.getElementsByClassName('.inputnum');
-    if(i == 0)
-    {
-        i++;
-        mainpage.style.backgroundColor = '#eeeeee';
-        mainpage.style.color = 'rgb(51,51,51)';
-        display.style.backgroundColor = 'rgb(174, 50, 199)';
-        display.style.color = '#ffffff';
-        inputnum.style.color = '#ffffff';
+// function togglemode(){
+//     document.getElementsByClassName('.mainpage');
+//     const display = document.getElementById('display');
+//     const inputnum = document.getElementsByClassName('.inputnum');
+//     if(i == 0)
+//     {
+//         i++;
+//         mainpage.style.backgroundColor = '#eeeeee';
+//         mainpage.style.color = 'rgb(51,51,51)';
+//         display.style.backgroundColor = 'rgb(174, 50, 199)';
+//         display.style.color = '#ffffff';
+//         inputnum.style.color = '#ffffff';
 
-    }
-    else
+//     }
+//     else
+//     {
+//         i--;
+//         mainpage.style.backgroundColor = 'rgb(51,51,51)';
+//         mainpage.style.color = '#ffffff';
+//         display.style.backgroundColor = '#ffffff';
+//         display.style.color = 'rgb(174, 50, 199)';
+//     }
+// }
+
+var k=0;
+function togglemode(){
+    if(k==0)
     {
-        i--;
-        mainpage.style.backgroundColor = 'rgb(51,51,51)';
-        mainpage.style.color = '#ffffff';
-        display.style.backgroundColor = '#ffffff';
-        display.style.color = 'rgb(174, 50, 199)';
+        k++;
+        document.getElementById("toggle").innerHTML = "COMP B";
+
+            document.getElementById('theory1').value = 4;
+            document.getElementById('theory2').value = 2;
+            document.getElementById('theory3').value = 4;
+            document.getElementById('theory4').value = 4;
+            document.getElementById('theory5').value = 2;
+
+            document.getElementById('practical1').value = 1;
+            document.getElementById('practical2').value = 2;
+            document.getElementById('practical3').value = 1;
+            document.getElementById('practical4').value = 1;
+            document.getElementById('practical5').value = 2;
+
+            document.getElementById()
+            setTimeout(() => {   }, 50);
+    }
+    else if(k==1)
+    {
+        k++;
+        document.getElementById("toggle").innerHTML = "AIDS C";
+
+            document.getElementById('theory1').value = 4;
+            document.getElementById('theory2').value = 4;
+            document.getElementById('theory3').value = 4;
+            document.getElementById('theory4').value = 4;
+            document.getElementById('theory5').value = 4;
+
+            document.getElementById('practical1').value = 2;
+            document.getElementById('practical2').value = 2;
+            document.getElementById('practical3').value = 1;
+            document.getElementById('practical4').value = 1;
+            document.getElementById('practical5').value = 1;
+    }
+    else if(k==2)
+    {
+        k++;
+        document.getElementById("toggle").innerHTML = "IT D";
+
+            document.getElementById('theory1').value = 4;
+            document.getElementById('theory2').value = 4;
+            document.getElementById('theory3').value = 2;
+            document.getElementById('theory4').value = 3;
+            document.getElementById('theory5').value = 3;
+
+            document.getElementById('practical1').value = 1;
+            document.getElementById('practical2').value = 2;
+            document.getElementById('practical3').value = 3;
+            document.getElementById('practical4').value = 2;
+            document.getElementById('practical5').value = 2;
+    }
+    else if(k==3)
+    {
+        k++;
+        document.getElementById("toggle").innerHTML = "EXTC E";
+
+            document.getElementById('theory1').value = 4;
+            document.getElementById('theory2').value = 4;
+            document.getElementById('theory3').value = 2;
+            document.getElementById('theory4').value = 3;
+            document.getElementById('theory5').value = 4;
+
+            document.getElementById('practical1').value = 2;
+            document.getElementById('practical2').value = 2;
+            document.getElementById('practical3').value = 2;
+            document.getElementById('practical4').value = 1;
+            document.getElementById('practical5').value = 0;
+    }
+
+    else if(k==4)
+    {
+        k=0;
+        document.getElementById("toggle").innerHTML = "COMP A";
+
+            document.getElementById('theory1').value = 2;
+            document.getElementById('theory2').value = 4;
+            document.getElementById('theory3').value = 3;
+            document.getElementById('theory4').value = 4;
+            document.getElementById('theory5').value = 3;
+
+            document.getElementById('practical1').value = 3;
+            document.getElementById('practical2').value = 2;
+            document.getElementById('practical3').value = 1;
+            document.getElementById('practical4').value = 2;
+            document.getElementById('practical5').value = 0;
     }
 }
 
-var k=0;
 function test(){
     // document.getElementById('result').style.opacity = 1;
     // document.getElementById('result').style.transition = '0.2s ease-out';
@@ -78,7 +170,6 @@ function test(){
 
     var nweeksdone = CalculateWeeks(dates, datem);
     var nweeks = CalculateWeeks(dates, datee);
-    var nweeksrem = CalculateWeeks(datem,datee);
 
     var tlecsdone = Calculatetplecs(t, dates, datem);
     var plecsdone = Calculatetplecs(p, dates, datem);
@@ -102,11 +193,16 @@ function test(){
 
     const tobj = document.getElementById("twdiv");
     const pobj = document.getElementById("pwdiv");
-    animateValue(tobj, 0, ttoattend , 300);
-    setTimeout(() => {  animateValue(pobj, 0, ptoattend , 320); }, 50);
+    
+    animateValue(tobj, 1, ttoattend , 300);
+    setTimeout(() => {  animateValue(pobj, 1, ptoattend , 320); }, 50);
 
     document.getElementById('lect').innerHTML = `Theory in a week: ${weekt}<br>Practical in a week: ${weekp}`;
 }    
+
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
 
 function Calculatetplecs(t,startDate, endDate)
 {
