@@ -35,7 +35,26 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: rgb(174, 50, 199);
+    background: rgb(174,50,199);
+    background: -moz-linear-gradient(0deg, rgba(174,50,199,1) 54%, rgba(152,0,181,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(174,50,199,1) 54%, rgba(152,0,181,1) 100%);
+    background: linear-gradient(0deg, rgba(174,50,199,1) 54%, rgba(152,0,181,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ae32c7",endColorstr="#9800b5",GradientType=1);
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+}
+
+#note{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(174,50,199);
+    background: -moz-linear-gradient(180deg, rgba(174,50,199,1) 47%, rgba(115,19,133,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(174,50,199,1) 47%, rgba(115,19,133,1) 100%);
+    background: linear-gradient(180deg, rgba(174,50,199,1) 47%, rgba(115,19,133,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9800b5",endColorstr="#333333",GradientType=1);
     text-align: center;
     color: white;
     padding: 0 1rem;
@@ -64,6 +83,11 @@ body{
     margin-right: 1rem;
     margin-top: 4rem;
     opacity: 0;
+}
+
+#notetext{
+    color: rgb(235, 135, 255);
+    font-size: 1.2vw;
 }
 
 .go .subtext{
@@ -283,8 +307,16 @@ tr:hover{
         padding: 0rem;
     }
 
+    .welcome{
+        font-size: 3rem;
+    }
     .subtext{
-        font-size: 1em;
+        font-size: 1.1rem;
+    }
+
+    #notetext{
+        color: rgb(235, 135, 255);
+        font-size: 0.9rem;
     }
 
     .answer{

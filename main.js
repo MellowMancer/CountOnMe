@@ -12,32 +12,6 @@ window.onload = function () {
     document.getElementById('datem').value = `${yyyy}-${mm}-${dd}`;
 };
 
-var i=0;
-
-// function togglemode(){
-//     document.getElementsByClassName('.mainpage');
-//     const display = document.getElementById('display');
-//     const inputnum = document.getElementsByClassName('.inputnum');
-//     if(i == 0)
-//     {
-//         i++;
-//         mainpage.style.backgroundColor = '#eeeeee';
-//         mainpage.style.color = 'rgb(51,51,51)';
-//         display.style.backgroundColor = 'rgb(174, 50, 199)';
-//         display.style.color = '#ffffff';
-//         inputnum.style.color = '#ffffff';
-
-//     }
-//     else
-//     {
-//         i--;
-//         mainpage.style.backgroundColor = 'rgb(51,51,51)';
-//         mainpage.style.color = '#ffffff';
-//         display.style.backgroundColor = '#ffffff';
-//         display.style.color = 'rgb(174, 50, 199)';
-//     }
-// }
-
 var k=0;
 function togglemode(){
     if(k==0)
@@ -90,7 +64,7 @@ function togglemode(){
 
             document.getElementById('practical1').value = 1;
             document.getElementById('practical2').value = 2;
-            document.getElementById('practical3').value = 3;
+            document.getElementById('practical3').value = 1;
             document.getElementById('practical4').value = 2;
             document.getElementById('practical5').value = 2;
     }
