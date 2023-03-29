@@ -156,8 +156,9 @@ function test(){
 
     var bonus = Math.floor(Number(document.getElementById('bonus').value)/2);
 
-    var totaltclass = Math.ceil((75-bonus)*(nweeks*weekt + tlecs)/100);
-    var totalpclass = Math.ceil((75-bonus)*(nweeks*weekp + plecs)/100);
+    var goal = Number(document.getElementById('goal').value);
+    var totaltclass = Math.ceil((goal-bonus)*(nweeks*weekt + tlecs)/100);
+    var totalpclass = Math.ceil((goal-bonus)*(nweeks*weekp + plecs)/100);
 
     var ttoattend = Math.ceil((totaltclass - tclassattended)/CalculateWeeksMore(datem,datee));
     var ptoattend = Math.ceil((totalpclass - pclassattended)/CalculateWeeksMore(datem,datee));
@@ -172,6 +173,7 @@ function test(){
     setTimeout(() => {  animateValue(pobj, 1, ptoattend , 320); }, 50);
 
     document.getElementById('lect').innerHTML = `Theory in a week: ${weekt}<br>Practical in a week: ${weekp}`;
+    document.getElementById('resultgoal').innerHTML = `(To achieve ${goal}% attendance)`;
 }    
 
 function getRandomArbitrary(min, max) {

@@ -144,6 +144,23 @@ body{
     scale: 99%;
 }
 
+#goal{
+    position: absolute;
+    text-align: center;
+    font-family: 'Tilt Warp';
+    color: rgb(228, 228, 228);
+    background-color: rgb(65, 65, 65);
+    border-radius: 0.5rem;
+    border: 1px solid rgb(175, 53, 200);
+    font-size: 1rem;
+    top: 4.5rem;
+    right: 0.5rem;  
+    width: 2.5rem;
+    height: 2.5rem;
+    /* background: url(toggle.svg); */
+    margin: 0.5rem 1rem;
+}
+
 #result{
     display: flex;
     justify-content: center;
@@ -153,6 +170,10 @@ body{
     scale: 110%;
     margin: 0rem;
     /* opacity: 0; */
+}
+
+#resultgoal{
+    color: #d3d3d3;
 }
 
 .drumroll{

@@ -37,6 +37,7 @@
 
         <div class="page" id="mainpage">
             <button id="toggle" onclick = "togglemode()" align="center">COMP A</button> 
+            <input type="text" class="attend" id="goal" placeholder="-" name="goal" value="75">
             <div class="extra">
             <div class="input">
                 <div class="inputsection">
@@ -96,6 +97,10 @@
                             <td class="arow"><label for="bonus" class="seclabel">Bonus Attendance (if any):&nbsp;</label></td>
                             <td class="arow"><input type="text" class="attend" id="bonus" placeholder="-" name="bonus" value="0"></td>
                         </tr>
+                        <!-- <tr>
+                            <td class="arow"> <label for="goal" class="seclabel">Attendance Goal:&nbsp;</label></td>
+                            <td class="arow"><input type="text" class="attend" id="goal" placeholder="-" name="goal" value="75"></td>
+                        </tr> -->
                     </table>
                 </div>
                 <div class="button">
@@ -132,6 +137,7 @@
                 </div> -->
                 <div class="answercontainer" id="weekanswer">
                     <div>In a week, you need to attend<br></div>
+                    <div id="resultgoal">(To achieve --% attendance)</div>
                     <div id="equivalent"><br></div>
                     <div id="lect"><br></div>
                     <table>
