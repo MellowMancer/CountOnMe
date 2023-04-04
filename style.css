@@ -34,7 +34,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
     background: rgb(174,50,199);
     background: -moz-linear-gradient(0deg, rgba(174,50,199,1) 54%, rgba(152,0,181,1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(174,50,199,1) 54%, rgba(152,0,181,1) 100%);
@@ -112,10 +113,30 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    overflow-x: hidden;
     height: 100vh;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
     background-color: rgb(51, 51, 51);
     color: white;
     padding: 0rem;
+    scroll-snap-stop: always;
+}
+
+#mainpage::-webkit-scrollbar { 
+    /* width: 0.6rem; */
+    display: none; /*  Safari and Chrome */
+}
+
+#mainpage::-webkit-scrollbar-thumb { /* Foreground */
+    background: #999;
+}
+
+#mainpage::-webkit-scrollbar-track { /* Background */
+    background: #333;
 }
 
 #toggle{
@@ -153,8 +174,8 @@ body{
     border-radius: 0.5rem;
     border: 1px solid rgb(175, 53, 200);
     font-size: 1rem;
-    top: 4.5rem;
-    right: 0.5rem;  
+    top: 0.8rem;
+    right: 6rem;  
     width: 2.5rem;
     height: 2.5rem;
     /* background: url(toggle.svg); */
@@ -166,8 +187,8 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
-    scale: 110%;
+    width: 48%;
+    scale: 100%;
     margin: 0rem;
     /* opacity: 0; */
 }
@@ -210,7 +231,7 @@ body{
 .input{
     display: flex;
     flex-direction: column;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 0rem 2rem 2rem 2rem;
 }
 
 .inputnum{
@@ -228,7 +249,7 @@ body{
     align-items: center;
     justify-content: center;
     scale: 110%;
-    width: 50%;
+    width: 48%;
     padding: 1rem;
 }
 
@@ -346,10 +367,10 @@ tr:hover{
         margin: 0.2rem 1.6rem;
     }
 
-    .result{
+    /* .result{
         margin: 0rem 4rem;
         scale: 100%;
-    }
+    } */
     
     .answercontainer{
         padding: 0rem;
@@ -359,6 +380,8 @@ tr:hover{
     }
 
     .extra{
+        position: relative;
+        top: 3.2rem;
         scale: 80%;
         margin: 0;
         padding: 0;
@@ -366,6 +389,6 @@ tr:hover{
 
     .res-data{
         width: 10rem;
-        /* border: 1px solid red; */
+        border: 1px solid red;
     }
 }

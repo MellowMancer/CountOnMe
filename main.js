@@ -3,6 +3,10 @@ window.onload = function () {
     document.documentElement.classList.add('go');
     let today = new Date();
     let dd = today.getDate();
+    if(dd<10)
+    {
+        dd = "0" + dd;
+    }
     let mm = today.getMonth() + 1;
     if(mm<10)
     {
@@ -10,9 +14,17 @@ window.onload = function () {
     }
     let yyyy = today.getFullYear();
     document.getElementById('datem').value = `${yyyy}-${mm}-${dd}`;
+    let home = document.getElementById('homepage');
+    let main = document.getElementById('mainpage');
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.home.style.height('--vh', `${vh}px`);
 };
 
-var k=0;
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+
+
+let k=0;
 function togglemode(){
     if(k==0)
     {
@@ -30,9 +42,6 @@ function togglemode(){
             document.getElementById('practical3').value = 1;
             document.getElementById('practical4').value = 1;
             document.getElementById('practical5').value = 2;
-
-            document.getElementById()
-            setTimeout(() => {   }, 50);
     }
     else if(k==1)
     {
@@ -108,11 +117,11 @@ function togglemode(){
 function test(){
     // document.getElementById('result').style.opacity = 1;
     // document.getElementById('result').style.transition = '0.2s ease-out';
-    var tattendance = Number(document.getElementById('theory').value);
-    var pattendance = Number(document.getElementById('practical').value);
-    var dates = new Date(document.getElementById('dates').value);
-    var datem = new Date(document.getElementById('datem').value);
-    var datee = new Date(document.getElementById('datee').value);
+    let tattendance = Number(document.getElementById('theory').value);
+    let pattendance = Number(document.getElementById('practical').value);
+    let dates = new Date(document.getElementById('dates').value);
+    let datem = new Date(document.getElementById('datem').value);
+    let datee = new Date(document.getElementById('datee').value);
 
     const t = [
         Number(document.getElementById('theory1').value),
@@ -122,7 +131,7 @@ function test(){
         Number(document.getElementById('theory5').value)
     ]
 
-    var weekt = 0;
+    let weekt = 0;
     for(let j = 0; j < 5; j++)
     {
         weekt += t[j];
@@ -136,33 +145,34 @@ function test(){
         Number(document.getElementById('practical5').value)
     ]
 
-    var weekp = 0;
+    let weekp = 0;
     for(let j = 0; j < 5; j++)
     {
         weekp += p[j];  
     }
 
-    var nweeksdone = CalculateWeeks(dates, datem);
-    var nweeks = CalculateWeeks(dates, datee);
+    let nweeksdone = CalculateWeeks(dates, datem);
+    let nweeks = CalculateWeeks(dates, datee);
 
-    var tlecsdone = Calculatetplecs(t, dates, datem);
-    var plecsdone = Calculatetplecs(p, dates, datem);
+    let tlecsdone = Calculatetplecs(t, dates, datem);
+    let plecsdone = Calculatetplecs(p, dates, datem);
 
-    var tlecs = Calculatetplecs(t, dates, datee);
-    var plecs = Calculatetplecs(p, dates, datee);
+    let tlecs = Calculatetplecs(t, dates, datee);
+    let plecs = Calculatetplecs(p, dates, datee);
 
-    var tclassattended = Math.floor(((nweeksdone*weekt + tlecsdone)*tattendance)/100);
-    var pclassattended = Math.floor(((nweeksdone*weekp + plecsdone)*pattendance)/100);
+    let tclassattended = Math.floor(((nweeksdone*weekt + tlecsdone)*tattendance)/100);
+    let pclassattended = Math.floor(((nweeksdone*weekp + plecsdone)*pattendance)/100);
 
-    var bonus = Math.floor(Number(document.getElementById('bonus').value)/2);
+    let bonus = Math.floor(Number(document.getElementById('bonus').value)/2);
 
-    var goal = Number(document.getElementById('goal').value);
-    var totaltclass = Math.ceil((goal-bonus)*(nweeks*weekt + tlecs)/100);
-    var totalpclass = Math.ceil((goal-bonus)*(nweeks*weekp + plecs)/100);
+    // let goal = Number(document.getElementById('goal').value);
+    goal = 75;
+    let totaltclass = Math.ceil((goal-bonus)*(nweeks*weekt + tlecs)/100);
+    let totalpclass = Math.ceil((goal-bonus)*(nweeks*weekp + plecs)/100);
 
-    var ttoattend = Math.ceil((totaltclass - tclassattended)/CalculateWeeksMore(datem,datee));
-    var ptoattend = Math.ceil((totalpclass - pclassattended)/CalculateWeeksMore(datem,datee));
-    var equivalent = Math.round(totaltclass/totalpclass*100)/100;
+    let ttoattend = Math.ceil((totaltclass - tclassattended)/CalculateWeeksMore(datem,datee));
+    let ptoattend = Math.ceil((totalpclass - pclassattended)/CalculateWeeksMore(datem,datee));
+    let equivalent = Math.round(totaltclass/totalpclass*100)/100;
 
     document.getElementById('equivalent').innerHTML = `(1 Practical is equivalent to ${equivalent} Theory lectures)`;
 
@@ -182,8 +192,8 @@ function getRandomArbitrary(min, max) {
 
 function Calculatetplecs(t,startDate, endDate)
 {
-    var day1 = startDate.getDay();
-    var day2 = endDate.getDay();
+    let day1 = startDate.getDay();
+    let day2 = endDate.getDay();
     if(day1 == 6 && day2 == 0)
     {
         return 0;
@@ -192,7 +202,7 @@ function Calculatetplecs(t,startDate, endDate)
     if (day2 == 0 || day2 == 6)
         day2 = 5;
 
-    var n = 0;
+    let n = 0;
     do
     {
         if(day1 == 0 || day1 == 6)
@@ -210,11 +220,11 @@ function CalculateWeeks(startDate, endDate)
     if (endDate < startDate)
     return 0;
 
-    var ONE_WEEK = 1000 * 60 * 60 * 24 * 7;
-	var date1ms = startDate.getTime();
-	var date2ms = endDate.getTime();
+    let ONE_WEEK = 1000 * 60 * 60 * 24 * 7;
+	let date1ms = startDate.getTime();
+	let date2ms = endDate.getTime();
 	// Calculate the difference in milliseconds
-	var difference_ms = Math.abs(date1ms - date2ms);
+	let difference_ms = Math.abs(date1ms - date2ms);
 	// Convert back to weeks and return hole weeks
 	return Math.floor(difference_ms / ONE_WEEK);
 }
@@ -224,11 +234,11 @@ function CalculateWeeksMore(startDate, endDate)
     if (endDate < startDate)
     return 0;
 
-    var ONE_WEEK = 1000 * 60 * 60 * 24 * 7;
-	var date1ms = startDate.getTime();
-	var date2ms = endDate.getTime();
+    let ONE_WEEK = 1000 * 60 * 60 * 24 * 7;
+	let date1ms = startDate.getTime();
+	let date2ms = endDate.getTime();
 	// Calculate the difference in milliseconds
-	var difference_ms = Math.abs(date1ms - date2ms);
+	let difference_ms = Math.abs(date1ms - date2ms);
 	// Convert back to weeks and return hole weeks
 	return (difference_ms / ONE_WEEK);
 }
