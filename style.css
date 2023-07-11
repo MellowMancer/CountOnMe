@@ -5,21 +5,21 @@ body{
 }
 
 .container{
-    overflow-y: scroll;
+    overflow-y: hidden;
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
     overflow-x: hidden;
-    height: 100vh;
-    scroll-snap-type: y mandatory;
+    /* height: 100vh; */
+    /* scroll-snap-type: y mandatory; */
 }
 
 .container::-webkit-scrollbar { 
+    display: none;
     /* width: 0.6rem; */
-    display: none; /*  Safari and Chrome */
 }
 
 .container::-webkit-scrollbar-thumb { /* Foreground */
-    background: #999;
+    background: #000000;
 }
 
 .container::-webkit-scrollbar-track { /* Background */
@@ -27,14 +27,14 @@ body{
 }
 
 .page{
-    scroll-snap-align: center;
+    /* scroll-snap-align: center; */
 }
 
 #homepage{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: 100vh; /*Fallback for browsers that do not support Custom Properties*/
     height: calc(var(--vh, 1vh) * 100);
     background: rgb(174,50,199);
     background: -moz-linear-gradient(0deg, rgba(174,50,199,1) 54%, rgba(152,0,181,1) 100%);
@@ -113,17 +113,16 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    overflow-y: scroll;
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+    overflow-y: hidden;
     overflow-x: hidden;
-    height: 100vh;
-    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-    height: calc(var(--vh, 1vh) * 100);
+    min-height: 90vh; /*Fallback for browsers that do not support Custom Properties*/
+    min-height: calc(var(--vh, 1vh) * 90);
+    height: fit-content;
+    padding: 3rem 0;
     background-color: rgb(51, 51, 51);
     color: white;
-    padding: 0rem;
-    scroll-snap-stop: always;
+    /* padding: 0rem; */
+    /* scroll-snap-stop: always; */
 }
 
 #mainpage::-webkit-scrollbar { 
@@ -343,7 +342,7 @@ tr:hover{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        /* height: 100vh; */
         background-color: rgb(51, 51, 51);
         color: white;
         padding: 0rem;

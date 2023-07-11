@@ -32,33 +32,57 @@ function togglemode(){
         document.getElementById("toggle").innerHTML = "COMP B";
 
             document.getElementById('theory1').value = 4;
-            document.getElementById('theory2').value = 2;
+            document.getElementById('theory2').value = 4;
             document.getElementById('theory3').value = 4;
-            document.getElementById('theory4').value = 4;
-            document.getElementById('theory5').value = 2;
+            document.getElementById('theory4').value = 2;
+            document.getElementById('theory5').value = 3;
 
             document.getElementById('practical1').value = 1;
-            document.getElementById('practical2').value = 2;
-            document.getElementById('practical3').value = 1;
-            document.getElementById('practical4').value = 1;
+            document.getElementById('practical2').value = 1;
+            document.getElementById('practical3').value = 2;
+            document.getElementById('practical4').value = 2;
             document.getElementById('practical5').value = 2;
+
+            // document.getElementById('theoryh1').value = 1;
+            // document.getElementById('theoryh2').value = 1;
+            // document.getElementById('theoryh3').value = 0;
+            // document.getElementById('theoryh4').value = 1;
+            // document.getElementById('theoryh5').value = 1;
+
+            // document.getElementById('practicalh1').value = 0;
+            // document.getElementById('practicalh2').value = 0;
+            // document.getElementById('practicalh3').value = 0;
+            // document.getElementById('practicalh4').value = 0;
+            // document.getElementById('practicalh5').value = 0;
     }
     else if(k==1)
     {
         k++;
         document.getElementById("toggle").innerHTML = "AIDS C";
 
-            document.getElementById('theory1').value = 4;
+            document.getElementById('theory1').value = 3;
             document.getElementById('theory2').value = 4;
-            document.getElementById('theory3').value = 4;
+            document.getElementById('theory3').value = 3;
             document.getElementById('theory4').value = 4;
-            document.getElementById('theory5').value = 4;
+            document.getElementById('theory5').value = 3;
 
             document.getElementById('practical1').value = 2;
-            document.getElementById('practical2').value = 2;
-            document.getElementById('practical3').value = 1;
+            document.getElementById('practical2').value = 1;
+            document.getElementById('practical3').value = 2;
             document.getElementById('practical4').value = 1;
-            document.getElementById('practical5').value = 1;
+            document.getElementById('practical5').value = 2;
+
+            // document.getElementById('theoryh1').value = 1;
+            // document.getElementById('theoryh2').value = 1;
+            // document.getElementById('theoryh3').value = 0;
+            // document.getElementById('theoryh4').value = 1;
+            // document.getElementById('theoryh5').value = 1;
+            
+            // document.getElementById('practicalh1').value = 0;
+            // document.getElementById('practicalh2').value = 0;
+            // document.getElementById('practicalh3').value = 0;
+            // document.getElementById('practicalh4').value = 0;
+            // document.getElementById('practicalh5').value = 0;
     }
     else if(k==2)
     {
@@ -67,15 +91,27 @@ function togglemode(){
 
             document.getElementById('theory1').value = 4;
             document.getElementById('theory2').value = 4;
-            document.getElementById('theory3').value = 2;
-            document.getElementById('theory4').value = 3;
-            document.getElementById('theory5').value = 3;
+            document.getElementById('theory3').value = 3;
+            document.getElementById('theory4').value = 2;
+            document.getElementById('theory5').value = 4;
 
             document.getElementById('practical1').value = 1;
-            document.getElementById('practical2').value = 2;
-            document.getElementById('practical3').value = 1;
+            document.getElementById('practical2').value = 1;
+            document.getElementById('practical3').value = 2;
             document.getElementById('practical4').value = 2;
-            document.getElementById('practical5').value = 2;
+            document.getElementById('practical5').value = 1;
+
+            // document.getElementById('theoryh1').value = 1;
+            // document.getElementById('theoryh2').value = 1;
+            // document.getElementById('theoryh3').value = 0;
+            // document.getElementById('theoryh4').value = 1;
+            // document.getElementById('theoryh5').value = 1;
+            
+            // document.getElementById('practicalh1').value = 0;
+            // document.getElementById('practicalh2').value = 0;
+            // document.getElementById('practicalh3').value = 0;
+            // document.getElementById('practicalh4').value = 0;
+            // document.getElementById('practicalh5').value = 0;
     }
     else if(k==3)
     {
@@ -93,6 +129,18 @@ function togglemode(){
             document.getElementById('practical3').value = 2;
             document.getElementById('practical4').value = 1;
             document.getElementById('practical5').value = 0;
+
+            // document.getElementById('theoryh1').value = 1;
+            // document.getElementById('theoryh2').value = 1;
+            // document.getElementById('theoryh3').value = 0;
+            // document.getElementById('theoryh4').value = 1;
+            // document.getElementById('theoryh5').value = 1;
+            
+            // document.getElementById('practicalh1').value = 0;
+            // document.getElementById('practicalh2').value = 0;
+            // document.getElementById('practicalh3').value = 0;
+            // document.getElementById('practicalh4').value = 0;
+            // document.getElementById('practicalh5').value = 0;
     }
 
     else if(k==4)
@@ -100,17 +148,29 @@ function togglemode(){
         k=0;
         document.getElementById("toggle").innerHTML = "COMP A";
 
-            document.getElementById('theory1').value = 2;
+            document.getElementById('theory1').value = 4;
             document.getElementById('theory2').value = 4;
             document.getElementById('theory3').value = 3;
             document.getElementById('theory4').value = 4;
-            document.getElementById('theory5').value = 3;
+            document.getElementById('theory5').value = 2;
 
-            document.getElementById('practical1').value = 3;
-            document.getElementById('practical2').value = 2;
-            document.getElementById('practical3').value = 1;
-            document.getElementById('practical4').value = 2;
-            document.getElementById('practical5').value = 0;
+            document.getElementById('practical1').value = 1;
+            document.getElementById('practical2').value = 1;
+            document.getElementById('practical3').value = 2;
+            document.getElementById('practical4').value = 1;
+            document.getElementById('practical5').value = 3;
+
+            // document.getElementById('theoryh1').value = 1;
+            // document.getElementById('theoryh2').value = 1;
+            // document.getElementById('theoryh3').value = 0;
+            // document.getElementById('theoryh4').value = 1;
+            // document.getElementById('theoryh5').value = 1;
+            
+            // document.getElementById('practicalh1').value = 0;
+            // document.getElementById('practicalh2').value = 0;
+            // document.getElementById('practicalh3').value = 0;
+            // document.getElementById('practicalh4').value = 0;
+            // document.getElementById('practicalh5').value = 0;
     }
 }
 
@@ -119,6 +179,8 @@ function test(){
     // document.getElementById('result').style.transition = '0.2s ease-out';
     let tattendance = Number(document.getElementById('theory').value);
     let pattendance = Number(document.getElementById('practical').value);
+    // let thattendance = Number(document.getElementById('theoryh').value);
+    // let phattendance = Number(document.getElementById('practicalh').value);
     let dates = new Date(document.getElementById('dates').value);
     let datem = new Date(document.getElementById('datem').value);
     let datee = new Date(document.getElementById('datee').value);
@@ -137,6 +199,20 @@ function test(){
         weekt += t[j];
     }
 
+    // const th = [
+    //     Number(document.getElementById('theoryh1').value),
+    //     Number(document.getElementById('theoryh2').value),
+    //     Number(document.getElementById('theoryh3').value),
+    //     Number(document.getElementById('theoryh4').value),
+    //     Number(document.getElementById('theoryh5').value)
+    // ]
+
+    // let weekth = 0;
+    // for(let j = 0; j < 5; j++)
+    // {
+    //     weekth += th[j];
+    // }
+
     const p = [
         Number(document.getElementById('practical1').value),
         Number(document.getElementById('practical2').value),
@@ -151,17 +227,37 @@ function test(){
         weekp += p[j];  
     }
 
+    // const ph = [
+    //     Number(document.getElementById('practical1').value),
+    //     Number(document.getElementById('practical2').value),
+    //     Number(document.getElementById('practical3').value),
+    //     Number(document.getElementById('practical4').value),
+    //     Number(document.getElementById('practical5').value)
+    // ]
+
+    // let weekph = 0;
+    // for(let j = 0; j < 5; j++)
+    // {
+    //     weekph += ph[j];  
+    // }
+
     let nweeksdone = CalculateWeeks(dates, datem);
     let nweeks = CalculateWeeks(dates, datee);
 
     let tlecsdone = Calculatetplecs(t, dates, datem);
     let plecsdone = Calculatetplecs(p, dates, datem);
+    // let thlecsdone = Calculatetplecs(th, dates, datem);
+    // let phlecsdone = Calculatetplecs(ph, dates, datem);
 
     let tlecs = Calculatetplecs(t, dates, datee);
     let plecs = Calculatetplecs(p, dates, datee);
+    // let thlecs = Calculatetplecs(th, dates, datee);
+    // let phlecs = Calculatetplecs(ph, dates, datee);
 
     let tclassattended = Math.floor(((nweeksdone*weekt + tlecsdone)*tattendance)/100);
     let pclassattended = Math.floor(((nweeksdone*weekp + plecsdone)*pattendance)/100);
+    // let thclassattended = Math.floor(((nweeksdone*weekth + thlecsdone)*thattendance)/100);
+    // let phclassattended = Math.floor(((nweeksdone*weekph + phlecsdone)*phattendance)/100);
 
     let bonus = Math.floor(Number(document.getElementById('bonus').value)/2);
 

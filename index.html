@@ -37,6 +37,7 @@
 
         <div class="page" id="mainpage">
             <button id="toggle" onclick = "togglemode()">COMP A</button> 
+            <!-- <button id="toggle" onclick = "togglemode2()">No Honours</button>  -->
             <!-- <input type="text" class="attend" id="goal" placeholder="-" name="goal" value="75"> -->
             <div class="extra">
             <div class="input">
@@ -53,20 +54,39 @@
                         </tr>
                         <tr>
                             <td>Theory:&nbsp;</td>
-                            <td class="tableinput"><input type="text" class="inputnum" id="theory1" placeholder="" value="2" name="theory1" ></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theory1" placeholder="" value="4" name="theory1" ></td>
                             <td class="tableinput"><input type="text" class="inputnum" id="theory2" placeholder="" value="4" name="theory2"></td>
-                            <td class="tableinput"><input type="text" class="inputnum" id="theory3" placeholder="" value="3" name="theory3"></td>
-                            <td class="tableinput"><input type="text" class="inputnum" id="theory4" placeholder="" value="4" name="theory4"></td>
-                            <td class="tableinput"><input type="text" class="inputnum" id="theory5" placeholder="" value="3" name="theory5"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theory3" placeholder="" value="5" name="theory3"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theory4" placeholder="" value="2" name="theory4"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theory5" placeholder="" value="4" name="theory5"></td>
+                        </tr>
+                        <!-- <tr>
+                            <td>Honours:<br>(Theory)&nbsp;</td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theoryh1" placeholder="" value="1" name="theoryh1"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theoryh2" placeholder="" value="1" name="theoryh2"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theoryh3" placeholder="" value="1" name="theoryh3"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theoryh4" placeholder="" value="1" name="theoryh4"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="theoryh5" placeholder="" value="1" name="theoryh5"></td>
+                        </tr> -->
+                        <tr>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Practical:&nbsp;</td>
-                            <td class="tableinput"><input type="text" class="inputnum" id="practical1" placeholder="" value="3" name="practical1"></td>
-                            <td class="tableinput"><input type="text" class="inputnum" id="practical2" placeholder="" value="2" name="practical2"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practical1" placeholder="" value="1" name="practical1"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practical2" placeholder="" value="1" name="practical2"></td>
                             <td class="tableinput"><input type="text" class="inputnum" id="practical3" placeholder="" value="1" name="practical3"></td>
                             <td class="tableinput"><input type="text" class="inputnum" id="practical4" placeholder="" value="2" name="practical4"></td>
-                            <td class="tableinput"><input type="text" class="inputnum" id="practical5" placeholder="" value="0" name="practical5"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practical5" placeholder="" value="1" name="practical5"></td>
                         </tr>
+                        <!-- <tr>
+                            <td>Honours:<br>(Practical)</td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practicalh1" placeholder="" value="1" name="practicalh1"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practicalh2" placeholder="" value="1" name="practicalh2"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practicalh3" placeholder="" value="1" name="practicalh3"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practicalh4" placeholder="" value="1" name="practicalh4"></td>
+                            <td class="tableinput"><input type="text" class="inputnum" id="practicalh5" placeholder="" value="1" name="practicalh5"></td>
+                        </tr> -->
 
                     </table>
                 </div>
@@ -75,7 +95,7 @@
                     <table>
                         <tr>
                             <td class="arow"><label class="seclabel">Start Of Session:</label></td>
-                            <td class="arow"><input type="date" id="dates" name="date" value="2023-01-16"></td>
+                            <td class="arow"><input type="date" id="dates" name="date" value="2023-07-10"></td>
                         </tr>
                         <tr>
                             <td class="arow"><label class="seclabel">Current Date Of Session:</label></td>
@@ -83,16 +103,24 @@
                         </tr>
                         <tr>
                             <td class="arow"><label class="seclabel">End Of Session:</label></td>
-                            <td class="arow"><input type="date" id="datee" name="date" value="2023-04-14"></td>
+                            <td class="arow"><input type="date" id="datee" name="date" value="2023-10-30"></td>
                         </tr>
                         <tr>
                             <td class="arow"> <label class="seclabel">Current Theory Attendance:&nbsp;</label></td>
                             <td class="arow"><input type="text" class="attend" id="theory" placeholder="-" name="theory" value="75"></td>
                         </tr>
+                        <!-- <tr>
+                            <td class="arow honours"> <label class="seclabel">Current Honours Theory<br> Attendance:&nbsp;</label></td>
+                            <td class="arow honours"><input type="text" class="attend" id="theoryh" placeholder="-" name="theoryh" value="75"></td>
+                        </tr> -->
                         <tr>
                             <td class="arow"><label class="seclabel">Current Practical Attendance:&nbsp;</label></td>
                             <td class="arow"><input type="text" class="attend" id="practical" placeholder="-" name="practical" value="75"></td>
                         </tr>
+                        <!-- <tr>
+                            <td class="arow honours"> <label class="seclabel">Current Honours Practical<br> Attendance:&nbsp;</label></td>
+                            <td class="arow honours"><input type="text" class="attend" id="practicalh" placeholder="-" name="practicalh" value="75"></td>
+                        </tr> -->
                         <tr>
                             <td class="arow"><label class="seclabel">Bonus Attendance (if any):&nbsp;</label></td>
                             <td class="arow"><input type="text" class="attend" id="bonus" placeholder="-" name="bonus" value="0"></td>
